@@ -5,7 +5,7 @@ body {
 #card {
     border-radius: 1.2em;
     background: #535456;
-    width: 58em;
+    width: 53em;
     height: 30em;
     box-shadow: 0 0 1.6em #404040;
 
@@ -16,6 +16,16 @@ body {
     left: 0;
     right: 0;
     margin: auto;
+
+    -webkit-animation: fadein 1.5s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 1.5s;
+    /* Internet Explorer */
+    -o-animation: fadein 1.5s;
+    /* Opera < 12.1 */
+    animation: fadein 1.5s;
 }
 
 #card #name {
@@ -33,14 +43,10 @@ body {
 #card #avatar {
     float: right;
 
-    margin-right: 3em;
-    margin-top: 5em;
+    margin-right: 4em;
+    margin-top: 6em;
 
     border-radius: 50%;
-}
-
-#card #icons {
-    overflow: hidden;
 }
 
 #card #icons {
@@ -49,7 +55,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    margin-left: 10em;
+    margin-left: 10.5em;
     margin-top: -2.2em;
 }
 
@@ -57,10 +63,66 @@ body {
     width: 3.75em;
     height: 3.75em;
 
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+    margin-right: 2em;
+
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+#card #icons .icon:hover {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
 }
 
 #card #icons a {
     outline: none;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

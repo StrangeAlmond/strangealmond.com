@@ -46,6 +46,9 @@ body {
     margin-right: 4em;
     margin-top: 6em;
 
+    width: 250px;
+    height: auto;
+
     border-radius: 50%;
 }
 
@@ -82,6 +85,54 @@ body {
 
 #card #icons a {
     outline: none;
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #card {
+        width: 40em;
+        height: 50em;
+    }
+
+    #card #name {
+        font-size: 4.5em;
+        float: none;
+
+        text-align: center;
+
+        position: relative;
+        bottom: -160px;
+        margin-left: auto;
+
+        letter-spacing: 0.075em;
+    }
+
+    #card #avatar {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -500px;
+
+        width: 450px;
+    }
+
+    #card #icons {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-right: auto;
+        top: -325px;
+    }
+
+    #card #icons .icon {
+        width: 7em;
+        height: auto;
+
+        margin-right: 4em;
+    }
 }
 
 @keyframes fadein {
